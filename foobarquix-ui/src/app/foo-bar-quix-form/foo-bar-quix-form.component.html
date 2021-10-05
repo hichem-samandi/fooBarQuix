@@ -1,0 +1,11 @@
+<div class="container">
+
+    <form [formGroup]="checkoutForm">
+        <div class="form-group">
+            <label for="numberConvert">number to convert</label>
+            <input type="text" class="form-control" id="numberConvert" (input)="valeurSaisie = $event.target.value">
+        </div>
+        <button type="button" (click)="submitNumber()" class="btn btn-primary">convert</button>
+    </form>
+    <h2>{{valeurSaisie}} and the result is {{result["result"]}}</h2>
+</div>
